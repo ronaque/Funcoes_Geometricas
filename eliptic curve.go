@@ -6,7 +6,7 @@ import (
 )
 
 func equacaoSegundoGrauMatrix() {
-	const tam = 1100
+	const tam = 11
 	var matrix [tam][tam]string
 	var x, y float64
 
@@ -16,7 +16,7 @@ func equacaoSegundoGrauMatrix() {
 	// Preencher Matriz
 	for i := tam - 1; i >= 0; i-- {
 		for j := 0; j < tam; j++ {
-			matrix[i][j] = " "
+			matrix[i][j] = fmt.Sprintf("%dx%d ", i, j)
 			// matrix[i][j] = " "
 		}
 	}
@@ -26,10 +26,10 @@ func equacaoSegundoGrauMatrix() {
 	// fmt.Println(matrix[0][10])
 	for x = 0.00; x <= 2.00; x += 0.01 {
 		y = a*(math.Pow(x, 2)) + (b * x) + c
-		// y = math.Sqrt((a * math.Pow(x, 2)) + a*x + b)
+		// y = math.Sqrt((a * math.Pow(x, 3)) + a*x + b)
 		// fmt.Printf("x: %f x*10: %f intx: %d y: %f y*10: %f inty: %d\n", x, x*10, int(x*10), y, y*10, int(y*10))
 		// fmt.Printf("x*10: %f intx: %d y*10: %f inty: %d\n", x*10, int(x*10), y*10, int(y*10))
-		matrix[int(y*10)][int(10*x)] = "."
+		matrix[(tam/2)+int(y)][(tam/2)+int(x)] = "a   "
 	}
 
 	//i = y; j = x
