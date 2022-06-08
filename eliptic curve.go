@@ -24,7 +24,7 @@ func equacaoSegundoGrauMatrix() {
 	// x, y = 0.0, 0.0
 	// matrix[int(x)][int(y)] = "a\t"
 	// fmt.Println(matrix[0][10])
-	for x = 0.00; x <= 2.00; x += 0.01 {
+	for x = 0.00; x <= 10.00; x += 0.01 {
 		y = a*(math.Pow(x, 2)) + (b * x) + c
 		// y = math.Sqrt((a * math.Pow(x, 2)) + a*x + b)
 		// fmt.Printf("x: %f x*10: %f intx: %d y: %f y*10: %f inty: %d\n", x, x*10, int(x*10), y, y*10, int(y*10))
